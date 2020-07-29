@@ -440,10 +440,10 @@ Returns: True
 间隔为等差数列，使用这个特性可以得到从 1 开始的平方序列。
 
 ```java
-public boolean isPerfectSquare(int num) {
+public boolean isPerfectSquare(int num) {        //Use subtraction and see that if the last element should be 0 or not.
     int subNum = 1;
     while (num > 0) {
-        num -= subNum;
+        num -= subNum;      
         subNum += 2;
     }
     return num == 0;
