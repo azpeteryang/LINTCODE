@@ -283,7 +283,7 @@ Output: [-1,-1]
 ```java
 public int[] searchRange(int[] nums, int target) {            //Find the range
     int first = findFirst(nums, target);
-    int last = findFirst(nums, target + 1) - 1;
+    int last = findFirst(nums, target + 1) - 1;               //制造一个较大的值放入
     if (first == nums.length || nums[first] != target) {
         return new int[]{-1, -1};
     } else {
