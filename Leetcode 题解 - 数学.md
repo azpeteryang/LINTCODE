@@ -458,7 +458,7 @@ public boolean isPerfectSquare(int num) {        //Use subtraction and see that 
 
 ```java
 public boolean isPowerOfThree(int n) {
-    return n > 0 && (1162261467 % n == 0);
+    return n > 0 && (1162261467 % n == 0);           //int型数组的最大值为1162261467
 }
 ```
 
