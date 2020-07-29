@@ -120,9 +120,9 @@ public int mySqrt(int x) {
     }
     int l = 1, h = x;
     while (l <= h) {
-        int mid = l + (h - l) / 2;
+        int mid = l + (h - l) / 2;                      //prevent array out of bounds
         int sqrt = x / mid;
-        if (sqrt == mid) {
+        if (sqrt == mid) {                              // The goal is to let sqrt equals to mid
             return mid;
         } else if (mid > sqrt) {
             h = mid - 1;
