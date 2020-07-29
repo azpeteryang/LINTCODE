@@ -281,7 +281,7 @@ Output: [-1,-1]
 可以用二分查找找出第一个位置和最后一个位置，但是寻找的方法有所不同，需要实现两个二分查找。我们将寻找  target 最后一个位置，转换成寻找 target+1 第一个位置，再往前移动一个位置。这样我们只需要实现一个二分查找代码即可。
 
 ```java
-public int[] searchRange(int[] nums, int target) {
+public int[] searchRange(int[] nums, int target) {            //Find the range
     int first = findFirst(nums, target);
     int last = findFirst(nums, target + 1) - 1;
     if (first == nums.length || nums[first] != target) {
@@ -291,7 +291,7 @@ public int[] searchRange(int[] nums, int target) {
     }
 }
 
-private int findFirst(int[] nums, int target) {
+private int findFirst(int[] nums, int target) {              //Find the first element
     int l = 0, h = nums.length; // 注意 h 的初始值
     while (l < h) {
         int m = l + (h - l) / 2;
